@@ -1,3 +1,22 @@
-<p>
-  author works!
-</p>
+<div class="container-fluid">
+  <div class="row mt-2">
+    <div class="col-12 mt-3">
+      <button class="btn btn-primary w-100" (click)="addAuthor()">Add Author</button>
+    </div>
+  </div>
+
+  <div class="row mt-2">
+    <table class="table table-bordered table-stripped">
+      <tr>
+        <th>Author</th>
+        <th>Is Author Popular</th>
+        <th>Short Description</th>
+      </tr>
+      <tr *ngFor="let author of authors">
+        <td>{{author.name}}</td>
+        <td>{{author.isPopular}}</td>
+        <td>{{author.shortDescription}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
