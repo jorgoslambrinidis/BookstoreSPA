@@ -8,6 +8,8 @@ import { AuthorComponent } from './components/author/author.component';
 import { CategoryComponent } from './components/category/category.component';
 import { PublisherComponent } from './components/publisher/publisher.component';
 import { UserComponent } from './components/user/user.component';
+import { LoginComponent } from './shared/components/login/login.component';
+import { RegisterComponent } from './shared/components/register/register.component';
 
 const routes: Routes = [
   {
@@ -37,6 +39,14 @@ const routes: Routes = [
   {
     path: 'users',
     component: UserComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
   }
 
 ];

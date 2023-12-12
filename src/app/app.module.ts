@@ -3,14 +3,18 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 // modules
 import { TestModule } from './modules/test/test.module';
+import { MaterialModule } from './shared/modules/material/material.module';
 
 // services
 import { MainService } from './services/main.service';
+import { BookService } from './services/book.service';
+import { PublisherService } from './services/publisher.service';
+import { AuthService } from './services/auth.service';
 
 // components
 import { AppComponent } from './app.component';
@@ -22,10 +26,9 @@ import { PublisherComponent } from './components/publisher/publisher.component';
 import { UserComponent } from './components/user/user.component';
 import { AuthorComponent } from './components/author/author.component';
 import { CategoryComponent } from './components/category/category.component';
-import { BookService } from './services/book.service';
-import { PublisherService } from './services/publisher.service';
 import { BookCardComponent } from './shared/components/book-card/book-card.component';
-import { MaterialModule } from './shared/modules/material/material.module';
+import { LoginComponent } from './shared/components/login/login.component';
+import { RegisterComponent } from './shared/components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -38,12 +41,15 @@ import { MaterialModule } from './shared/modules/material/material.module';
     CategoryComponent,
     PublisherComponent,
     UserComponent,
-    BookCardComponent
+    BookCardComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     TestModule,
     BrowserAnimationsModule,
     HttpClientModule,
@@ -52,7 +58,8 @@ import { MaterialModule } from './shared/modules/material/material.module';
   providers: [
     MainService,
     BookService,
-    PublisherService
+    PublisherService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

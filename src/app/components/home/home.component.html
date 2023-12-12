@@ -6,6 +6,8 @@
       <h3>Today is {{ date | date: 'dd/MM/YYYY, HH:mm'}}h</h3>
 
       <p>This is a basic homepage with some content. You can customize it as you like.</p>
+
+      <mat-progress-bar [mode]="progressMode" [value]="progressBarPercentage" color="accent"></mat-progress-bar>
     </div>
   </div>
   <div class="row">
